@@ -94,8 +94,42 @@
 
     <section class="page-notes">
       <h2>Additional notes</h2>
-      <p class="placeholder">Space reserved for examples, screenshots, links to live demos
-      or internal assets for this module — to be completed.</p>
+      <p class="note">What's actually configurable, and a real-world service that provides
+      this out of the box.</p>
+
+      <div class="req-group">What you can actually configure</div>
+      <ul class="req-list">
+        <li>Target date and time — the countdown is calculated <strong>server-side</strong>,
+        not via JavaScript in the client, so the remaining time is correct regardless of the
+        recipient's timezone or local clock</li>
+        <li>Visual style: colours, fonts, size, and labels in the recipient's language
+        (days/hours/minutes/seconds, or just hours/minutes for short countdowns)</li>
+        <li><strong>What happens once it hits zero</strong> — the detail most often forgotten:
+        without an "evergreen" fallback, anyone opening the email after the deadline sees the
+        timer frozen at 00:00:00 (or broken). Proper services let you set an alternative
+        image/state that the same URL serves automatically once the target date has passed
+        (e.g. an "Offer ended" banner)</li>
+        <li>Multiple independent timers in the same email (e.g. different deadlines per region
+        or timezone)</li>
+      </ul>
+
+      <div class="req-group">Kickdynamic (now part of Litmus Personalize)</div>
+      <ul class="req-list">
+        <li>A no-code service built specifically for this, acquired by Litmus in 2021:
+        generates the countdown as an animated GIF at the moment the email is opened,
+        calculating the remaining time server-side</li>
+        <li>Part of a broader suite of "open-time" dynamic content that uses the same
+        mechanism for other things: live inventory levels, weather- or location-based
+        content, live polls, scratch-and-reveal</li>
+        <li>The practical benefit: no need to build or maintain the image-generation server
+        yourself — configure the date, style and fallback in their dashboard and drop the
+        resulting URL into the <code>&lt;img&gt;</code> tag</li>
+      </ul>
+
+      <p class="footnote" style="margin-top:14px;">Since it's an image (usually a GIF), the
+      same rules as the <a href="../modules/gif.html">Animated GIF module</a> apply: a
+      descriptive <code>alt</code> for recipients with images disabled, and the same file-weight
+      discipline.</p>
     </section>
 
     <div class="pagenav">
