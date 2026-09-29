@@ -30,7 +30,7 @@
           <a href="../modules/hamburger-menu.html">Hamburger menu</a>
           <a href="../modules/countdown.html" class="current">Live Countdown</a>
           <a href="../modules/gif.html">Animated GIF</a>
-          <a href="../modules/video.html">MP4 Video</a>
+          <a href="../modules/video.html">Native Video</a>
           <a href="../modules/amp-for-email.html">Form / AMP for Email</a>
           <a href="../modules/scratch-card.html">Scratch card &amp; gamification</a>
         </div>
@@ -54,7 +54,7 @@
         <a class="sub" href="../modules/hamburger-menu.html">Hamburger menu</a>
         <a class="sub" href="../modules/countdown.html">Live Countdown</a>
         <a class="sub" href="../modules/gif.html">Animated GIF</a>
-        <a class="sub" href="../modules/video.html">MP4 Video</a>
+        <a class="sub" href="../modules/video.html">Native Video</a>
         <a class="sub" href="../modules/amp-for-email.html">Form / AMP for Email</a>
         <a class="sub" href="../modules/scratch-card.html">Scratch card &amp; gamification</a>
         <a href="../index.html#matrix">Support matrix</a>
@@ -99,31 +99,32 @@
 
       <div class="req-group">What you can actually configure</div>
       <ul class="req-list">
-        <li>Target date and time — the countdown is calculated <strong>server-side</strong>,
-        not via JavaScript in the client, so the remaining time is correct regardless of the
+        <li><strong>Target date and time</strong> — calculated server-side, not via
+        JavaScript in the client, so the remaining time is correct regardless of the
         recipient's timezone or local clock</li>
-        <li>Visual style: colours, fonts, size, and labels in the recipient's language
-        (days/hours/minutes/seconds, or just hours/minutes for short countdowns)</li>
+        <li><strong>Visual style</strong> — colours, fonts, size, and labels in the
+        recipient's language (days/hours/minutes/seconds, or just hours/minutes for short
+        countdowns)</li>
         <li><strong>What happens once it hits zero</strong> — the detail most often forgotten:
         without an "evergreen" fallback, anyone opening the email after the deadline sees the
         timer frozen at 00:00:00 (or broken). Proper services let you set an alternative
         image/state that the same URL serves automatically once the target date has passed
         (e.g. an "Offer ended" banner)</li>
-        <li>Multiple independent timers in the same email (e.g. different deadlines per region
-        or timezone)</li>
+        <li><strong>Multiple independent timers</strong> — in the same email (e.g. different
+        deadlines per region or timezone)</li>
       </ul>
 
       <div class="req-group">Kickdynamic (now part of Litmus Personalize)</div>
       <ul class="req-list">
-        <li>A no-code service built specifically for this, acquired by Litmus in 2021:
+        <li><strong>A purpose-built no-code service</strong>, acquired by Litmus in 2021 —
         generates the countdown as an animated GIF at the moment the email is opened,
         calculating the remaining time server-side</li>
-        <li>Part of a broader suite of "open-time" dynamic content that uses the same
-        mechanism for other things: live inventory levels, weather- or location-based
-        content, live polls, scratch-and-reveal</li>
-        <li>The practical benefit: no need to build or maintain the image-generation server
-        yourself — configure the date, style and fallback in their dashboard and drop the
-        resulting URL into the <code>&lt;img&gt;</code> tag</li>
+        <li><strong>Part of a broader suite</strong> of "open-time" dynamic content that uses
+        the same mechanism for other things: live inventory levels, weather- or
+        location-based content, live polls, scratch-and-reveal</li>
+        <li><strong>The practical benefit</strong>: no need to build or maintain the
+        image-generation server yourself — configure the date, style and fallback in their
+        dashboard and drop the resulting URL into the <code>&lt;img&gt;</code> tag</li>
       </ul>
 
       <p class="footnote" style="margin-top:14px;">Since it's an image (usually a GIF), the
