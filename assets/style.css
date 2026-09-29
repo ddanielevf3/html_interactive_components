@@ -313,8 +313,8 @@ footer{border-top:3px solid var(--accent);margin-top:20px;padding-top:18px;font-
 .req-group{font-family:'Fraunces',Georgia,serif;font-weight:600;color:var(--ink);font-size:15px;margin:16px 0 8px;}
 .req-group:first-of-type{margin-top:0;}
 .req-list{list-style:none;padding:0;margin:0 0 4px;display:flex;flex-direction:column;gap:6px;max-width:none;font-size:13.5px;color:var(--ink-soft);}
-.req-list li{display:flex;gap:9px;align-items:flex-start;}
-.req-list li::before{content:"";flex:0 0 6px;width:6px;height:6px;margin-top:6px;border-radius:50%;background:var(--accent);}
+.req-list li{position:relative;padding-left:17px;}
+.req-list li::before{content:"";position:absolute;left:0;top:7px;width:6px;height:6px;border-radius:50%;background:var(--accent);}
 
 /* live demo embeds */
 .demo-section{margin:28px 0 36px;}
