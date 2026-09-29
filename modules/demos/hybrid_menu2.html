@@ -23,8 +23,9 @@ table .cta td a {text-decoration: none !important;}
   <meta name="format-detection" content="telephone=no">
   <meta name="robots" content="noindex, nofollow">
   <meta name="x-apple-disable-message-reformatting">
-
-  <title></title>
+  <meta name="color-scheme" content="light dark">
+  <meta name="supported-color-schemes" content="light dark"> 
+  <title>Three+</title>
 
   <style type="text/css">
     * {-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;}
@@ -44,19 +45,28 @@ table .cta td a {text-decoration: none !important;}
     ul li{margin:0px 0 10px 0;}
     ol li{margin:0px 0 10px 0;}
     /*Mobile*/
-    @media only screen and (max-width:500px) {
+    @media only screen and (max-width:700px) {
       .maintable {width:100% !important;}
       .respimg {width:100% !important; height:auto !important;}
       .lfloat{float:left !important;}
       .db{display:block !important;}
       .resptab{width:100% !important;}
+      .ctamob{width:100% !important;}
     /* paddings  */
       .nopad{padding-top: 0px !important; padding-bottom: 0px !important; padding-left: 0px !important; padding-right: 0px !important;}
+      .padtop0{padding-top:0px !important;}
+      .padtop10{padding-top:10px !important;}
       .padtop20{padding-top:20px !important;}
+      .padtop40{padding-top:40px !important;}
+      .padbot0{padding-bottom:0px !important;}
       .padbot20{padding-bottom:20px !important;}
+      .padbot40{padding-bottom:40px !important;}
+      .padtopbot10{padding-top:10px !important; padding-bottom:10px !important;}     
       .padl20{padding-left:20px !important;}
-      .padr20{padding-right:20px !important;}
-      .padlr20{padding-left:20px !important; padding-right:20px !important}
+      .padr40{padding-right:40px !important;}
+      .padlr0{padding-left:0px !important; padding-right:0px !important}
+      .padlr40{padding-left:40px !important; padding-right:40px !important}
+      .mobfont-moreapp{font-size: 26px !important; line-height: 31px !important; }
     /* paddings */
     /* Reverse Table */      
       .rup{display: table-header-group!important; width:100%!important;}
@@ -93,14 +103,107 @@ table .cta td a {text-decoration: none !important;}
     /* Targets Gmail on Android */
     div > u ~ .resptab {min-width: 100%;}
     }
-    /* This center the email on Gmail and Outlook mobile ends */
+    /* This center the email on Gmail and Outlook mobile ends *
   </style>
-     <style type="text/css">
-      @media all and ( max-width: 600px )
-      {
-      
-      .no_bgcolor{background: none !important;}
-      *[id]#wrapper + table,*[class].container,*[class].menu{
+  <style type="text/css">
+    .hithere {animation: hithere 1s ease 2;}
+      @keyframes hithere {
+        30% { transform: scale(1.2); }
+        40%, 60% { transform: rotate(-20deg) scale(1.2); }
+        50% { transform: rotate(20deg) scale(1.2); }
+        70% { transform: rotate(0deg) scale(1.2); }
+        100% { transform: scale(1); }
+      }
+    .fade-in {opacity: 1; animation-name: fadeInOpacity; animation-iteration-count: 1; animation-timing-function: ease-in; animation-duration: 1.5s; }
+      @keyframes fadeInOpacity {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+  .fade-in-left {animation: fade-in-left 2s ease 1;}
+    @keyframes fade-in-left {
+      0% {
+        opacity: 0;
+        transform: translateX(-2px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+  .fadeInLeft {animation: fadeInLeft 1s ease-out 1;}
+    @keyframes fadeInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+
+  .fadeInRight {animation: fadeInRight 1s ease-out 1;}
+    @keyframes fadeInRight {
+      from {
+        opacity: 0;
+        transform: translateX(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .hvr-grow {
+      display: inline-block;
+      vertical-align: middle;
+      -webkit-transform: perspective(1px) translateZ(0);
+      transform: perspective(1px) translateZ(0);
+      box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+      -webkit-transition-duration: 0.3s;
+      transition-duration: 0.3s;
+      -webkit-transition-property: transform;
+      transition-property: transform;
+    }
+    .hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+    }
+  .wobble:hover {animation: wobble 2s ease 1;}
+    @keyframes wobble {
+      0% { transform: translateX(0%); }
+      15% { transform: translateX(-25%) rotate(-5deg); }
+      30% { transform: translateX(20%) rotate(3deg); }
+      45% { transform: translateX(-15%) rotate(-3deg); }
+      60% { transform: translateX(10%) rotate(2deg); }
+      75% { transform: translateX(-5%) rotate(-1deg); }
+      100% { transform: translateX(0%); }
+    }
+  .bounce-in {
+  animation: bounce-in 2s ease 1;
+}
+@keyframes bounce-in {
+  0% {
+    opacity: 0;
+    transform: scale(.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  70% { transform: scale(.9); }
+  100% { transform: scale(1); }
+}
+  </style>
+      <style type="text/css">    
+      @media all and ( max-width: 600px ){
+            *[id]#wrapper + table,*[class].container,*[class].menu{
       padding-top: 10px;
       min-width: 0 !important;
       -moz-text-size-adjust: none;
@@ -114,6 +217,7 @@ table .cta td a {text-decoration: none !important;}
       float: right;
       -webkit-tap-highlight-color: transparent;
       width: 50px;
+      padding-top: 15px;
       }
       *[id]#mobile-label > b{
       }
@@ -140,141 +244,134 @@ table .cta td a {text-decoration: none !important;}
       display: none;
       }
       }
+       a.menu-item:hover{color: #ff7a66 !important ;}
     </style>
-</head>
-<body style="margin:0 auto;padding-bottom:10px;padding-right:0;padding-left:0;min-width:100%;background-color:#ffffff;line-height: 0px;">
-  <center class="wrapper" style="width:100%;table-layout:fixed;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;">
-    <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff" style="table-layout: fixed;line-height: 0px;">
-      <tr>
-        <td valign="top" align="center" style="font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif;">
-        <!-- Emailcontent -->
-      
+  </head>
+  <body style="margin:0 auto;padding-bottom:10px;padding-right:0;padding-left:0;min-width:100%;background-color:#f1f1f1;line-height: 0px;">
+    <center class="wrapper" style="width:100%;table-layout:fixed;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#f1f1f1" style="table-layout: fixed;line-height: 0px;">
+        <tr>
+          <td valign="top" align="center" style="font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif;">
 
-                      <table cellpadding="0" cellspacing="0" border="0" width="600" class="resptab" role="presentation" style="width:600px;" bgcolor="#1a083d">
-                        <tr align="center">
-                          <td align="center">
-                            <table cellpadding="0" cellspacing="0" border="0" width="600" class="resptab" role="presentation" style="width:600px; border-bottom: 2px solid #dd3039; border-radius: 20px">
-                              <tr align="center">
-                                <td align="center" style="padding-top: 20px; padding-bottom:20px" class="padbot0">
-                                  <!--[if mso]>
-                                  <p style="display: none;">
-                                    <![endif]-->
-                                    <input id="mobile-checkbox" style="display: none!important; max-height: 0; visibility: hidden;" type="checkbox">
-                                    <!--[if mso]>
-                                  </p>
-                                  <![endif]-->
-                                  <table cellpadding="0" cellspacing="0" border="0" width="580" class="resptab" role="presentation" style="width:580px;">
+            <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="resptab" role="presentation" style="width:600px; border-bottom: 2px solid #b4afad;" bgcolor="#ffffff">
+              <tr align="center">
+                <td align="center" style="font-family: Helvetica, Arial, sans-serif; font-size: 12px; line-height: 18px; color:#000000; mso-line-height-rule: exactly; text-decoration: underline; padding-top: 20px; padding-bottom: 20px;">
+                  <a href="##"  target="_blank" rel="noopener" style="font-family: Helvetica, Arial, sans-serif; font-size: 12px; line-height: 18px; color:#000000; mso-line-height-rule: exactly; text-decoration: underline;">
+                    View online
+                  </a>
+                </td>
+              </tr>
+              <tr align="center">
+                <td align="center">
+            <!--[if mso]>
+            <p style="display: none;">
+              <![endif]-->
+                <input id="mobile-checkbox" style="display: none!important; max-height: 0; visibility: hidden;" type="checkbox">
+              <!--[if mso]>
+            </p>
+            <![endif]-->
+              <table cellpadding="0" cellspacing="0" border="0" width="520" class="resptab" role="presentation" style="width:520px;">
+                <tr align="center">
+                  <td align="center" class="padlr40 padbot20">
+                    <label for="mobile-checkbox" id="mobile-label" style="display: none;">
+                      <b style="background-color: #ff7a66;-moz-border-radius: 2px;-webkit-border-radius: 2px;border-radius: 10px;display: block;height: 5px;"></b>
+                      <b style="background-color: #ff7a66;-moz-border-radius: 2px;-webkit-border-radius: 2px;border-radius: 10px;display: block;height: 5px;"></b>
+                      <b style="background-color: #ff7a66;-moz-border-radius: 2px;-webkit-border-radius: 2px;border-radius: 10px;display: block;height: 5px;"></b>
+                    </label>
+                    <table align="left" cellpadding="0" cellspacing="0" border="0" width="60" role="presentation" style="width:60px;">
+                      <tr align="center">
+                        <td align="center" class="padbot0" style="padding-bottom: 15px;">
+                          <a href="##" style="color: #000001; text-decoration: none;" target="_blank" rel="noopener">
+                            <img src="https://www.three.co.uk/content/dam/threedigital/email/global-assets/email-campaign-navheader.png" alt="3" style="font-family: Helvetica, Arial, sans-serif; display: block; border: 0; font-size: 16px; font-weight: bold; color: #000001; line-height: 16px; mso-line-height-rule: exactly; text-align: center;" border="0"  width="60" height="60">
+                          </a>
+                        </td>
+                      </tr>
+                    </table>
+                  <!--[if mso]>
+                </td>
+                <td>
+                  <![endif]-->
+                    <table align="right" cellpadding="0" cellspacing="0" border="0" class="resptab menu" role="presentation">
+                      <tr align="center">
+                        <td align="center" class="padtop0" style="padding-top:15px">
+                          <div id="menu-wrapper">
+                          <!--[if mso]>
+                          <table border="0" cellpadding="0" cellspacing="0">
+                            <tr align="center">
+                              <td>
+                                <![endif]-->
+                                  <table align="right" cellpadding="0" cellspacing="0" border="0" class="resptab menu" role="presentation">
                                     <tr align="center">
-                                      <td align="center">
-                                        <label for="mobile-checkbox" id="mobile-label" class="padlr20" style="display: none;">
-                                        <b style="background-color: #dd3039;-moz-border-radius: 2px;-webkit-border-radius: 2px;border-radius: 10px;display: block;height: 5px;"></b>
-                                        <b style="background-color: #dd3039;-moz-border-radius: 2px;-webkit-border-radius: 2px;border-radius: 10px;display: block;height: 5px;"></b>
-                                        <b style="background-color: #dd3039;-moz-border-radius: 2px;-webkit-border-radius: 2px;border-radius: 10px;display: block;height: 5px;"></b>
-                                        </label>
-                                        <table align="left" cellpadding="0" cellspacing="0" border="0" width="117" role="presentation" style="width:117px;">
+                                      <th align="center" class="resptab db lfloat">
+                                        <table cellpadding="0" cellspacing="0" class="resptab" border="0" role="presentation">
                                           <tr align="center">
-                                            <td align="center" class="padl20" style="padding-bottom:10px">
-                                              <a href="" style="color: #000001; text-decoration: none;" target="_blank">
-                                                <img src="../../assets/vodafonethree-logo.svg" alt="" style="font-family: HelveticaNeue-Light, Helvetica, Arial, sans-serif; display: block; border: 0; font-size: 16px; font-weight: normal; color: #000001; line-height: 16px; mso-line-height-rule: exactly;" border="0" class="respimg" width="142" height="18">
+                                            <td align="center" class="padtopbot10" style="font-family: Helvetica,Arial,sans-serif; font-size:14px; line-height: 21px; color:#000000; text-align: center; text-decoration: none; padding-left: 10px; padding-right: 10px; font-weight: bold;">
+                                              <a href="##" class="menu-item textLeft" target="_blank" style="font-family: Helvetica,Arial,sans-serif; font-size:14px; line-height: 21px; color:#000000; text-align: center; text-decoration: none; font-weight: bold;">
+                                                Three+
                                               </a>
                                             </td>
                                           </tr>
                                         </table>
-                                        <!--[if mso]>
-                                      </td>
-                                      <td>
-                                        <![endif]-->
-                                        <table cellpadding="0" align="right" cellspacing="0" border="0" class="resptab menu" role="presentation">
+                                      </th>
+                                      <th align="center" class="hide" style="font-family: Helvetica,Arial,sans-serif; font-size:14px; line-height: 21px; color:#b4afad; text-align: center; text-decoration: none; font-weight: bold;">&nbsp;&nbsp;|&nbsp;&nbsp;</th>
+                                      <th align="center" class="resptab db lfloat">
+                                        <table cellpadding="0" cellspacing="0" class="resptab" border="0" role="presentation">
                                           <tr align="center">
-                                            <td align="center" class="padtop0" style="padding-top:10px">
-                                              <div id="menu-wrapper">
-                                                <!--[if mso]>
-                                                <table border="0" cellpadding="0" cellspacing="0">
-                                                  <tr align="center">
-                                                    <td>
-                                                      <![endif]-->
-                                                      <table cellpadding="0" align="right" cellspacing="0" border="0" class="resptab menu" role="presentation">
-                                                        <tr align="center">
-                                                          <th align="center" class="resptab db lfloat">
-                                                            <table cellpadding="0" cellspacing="0" class="resptab" border="0" role="presentation">
-                                                              <tr align="center">
-                                                                <td align="center" class="padlr20 padtop20 padbot20" style="font-family: Helvetica,Arial,sans-serif; font-size:16px; line-height: 18px; color:#ffffff; text-align: center; text-decoration: none; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px; font-weight: normal;">
-                                                                  <a href="##" class="menu-item textLeft" target="_blank" style="font-family: Helvetica,Arial,sans-serif; font-size:16px; line-height: 18px; color:#ffffff; text-align: center; text-decoration: none; font-weight: normal;">
-                                                                    Link 1
-                                                                  </a>
-                                                                </td>
-                                                              </tr>
-                                                            </table>
-                                                          </th>
-                                                          <th align="center" class="hide" width="19"></th>
-                                                          <th align="center" class="resptab db lfloat">
-                                                            <table cellpadding="0" cellspacing="0" class="resptab" border="0" role="presentation">
-                                                              <tr align="center">
-                                                                <td align="center" class="padlr20 padtop20 padbot20" style="font-family: Helvetica,Arial,sans-serif; font-size:16px; line-height: 18px; color:#ffffff; text-align: center; text-decoration: none; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px; font-weight: normal;">
-                                                                  <a href="##" class="menu-item textLeft" target="_blank" style="font-family: Helvetica,Arial,sans-serif; font-size:16px; line-height: 18px; color:#ffffff; text-align: center; text-decoration: none; font-weight: normal;">
-                                                                    Link 2
-                                                                  </a>
-                                                                </td>
-                                                              </tr>
-                                                            </table>
-                                                          </th>
-                                                          <th align="center" class="hide" width="19"></th>
-                                                          <th align="center" class="resptab db lfloat">
-                                                            <table cellpadding="0" cellspacing="0" class="resptab" border="0" role="presentation">
-                                                              <tr align="center">
-                                                                <td align="center" class="padlr20 padtop20 padbot20" style="font-family: Helvetica,Arial,sans-serif; font-size:16px; line-height: 18px; color:#ffffff; text-align: center; text-decoration: none; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px; font-weight: normal;">
-                                                                  <a href="##" class="menu-item textLeft" target="_blank" style="font-family: Helvetica,Arial,sans-serif; font-size:16px; line-height: 18px; color:#ffffff; text-align: center; text-decoration: none; font-weight: normal;">
-                                                                    Link 3
-                                                                  </a>
-                                                                </td>
-                                                              </tr>
-                                                            </table>
-                                                          </th>
-                                                          <th align="center" class="hide" width="19"></th>
-                                                          <th align="center" class="resptab db lfloat">
-                                                            <table cellpadding="0" cellspacing="0" class="resptab" border="0" role="presentation">
-                                                              <tr align="center">
-                                                                <td align="center" class="padlr20 padtop20 padbot20" style="font-family: Helvetica,Arial,sans-serif; font-size:16px; line-height: 18px; color:#ffffff; text-align: center; text-decoration: none; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px; font-weight: normal;">
-                                                                  <a href="##" class="menu-item textLeft" target="_blank" style="font-family: Helvetica,Arial,sans-serif; font-size:16px; line-height: 18px; color:#ffffff; text-align: center; text-decoration: none; font-weight: normal;">
-                                                                    Link 4
-                                                                  </a>
-                                                                </td>
-                                                              </tr>
-                                                            </table>
-                                                          </th>
-                                                        </tr>
-                                                      </table>
-                                                      <!--[if mso]>
-                                                    </td>
-                                                  </tr>
-                                                </table>
-                                                <![endif]-->
-                                              </div>
+                                            <td align="center" class="padtopbot10" style="font-family: Helvetica,Arial,sans-serif; font-size:14px; line-height: 21px; color:#000000; text-align: center; text-decoration: none; padding-left: 10px; padding-right: 10px; font-weight: bold;">
+                                              <a href="##" class="menu-item textLeft" target="_blank" style="font-family: Helvetica,Arial,sans-serif; font-size:14px; line-height: 21px; color:#000000; text-align: center; text-decoration: none; font-weight: bold;">
+                                                My3
+                                              </a>
                                             </td>
                                           </tr>
                                         </table>
-                                      </td>
+                                      </th>
+                                      <th align="center" class="hide" style="font-family: Helvetica,Arial,sans-serif; font-size:14px; line-height: 21px; color:#b4afad; text-align: center; text-decoration: none; font-weight: bold;">&nbsp;&nbsp;|&nbsp;&nbsp;</th>
+                                      <th align="center" class="resptab db lfloat">
+                                        <table cellpadding="0" cellspacing="0" class="resptab" border="0" role="presentation">
+                                          <tr align="center">
+                                            <td align="center" class="padtopbot10" style="font-family: Helvetica,Arial,sans-serif; font-size:14px; line-height: 21px; color:#000000; text-align: center; text-decoration: none; padding-left: 10px; padding-right: 10px; font-weight: bold;">
+                                              <a href="##" class="menu-item textLeft" target="_blank" style="font-family: Helvetica,Arial,sans-serif; font-size:14px; line-height: 21px; color:#000000; text-align: center; text-decoration: none; font-weight: bold;">
+                                                Support
+                                              </a>
+                                            </td>
+                                          </tr>
+                                        </table>
+                                      </th>
+                                      <th align="center" class="hide" style="font-family: Helvetica,Arial,sans-serif; font-size:14px; line-height: 21px; color:#b4afad; text-align: center; text-decoration: none; font-weight: bold;">&nbsp;&nbsp;|&nbsp;&nbsp;</th>
+                                      <th align="center" class="resptab db lfloat">
+                                        <table cellpadding="0" cellspacing="0" class="resptab" border="0" role="presentation">
+                                          <tr align="center">
+                                            <td align="center" class="padtop10" style="font-family: Helvetica,Arial,sans-serif; font-size:14px; line-height: 21px; color:#000000; text-align: center; text-decoration: none; padding-left: 10px; padding-right: 10px; font-weight: bold;">
+                                              <a href="##" class="menu-item textLeft" target="_blank" style="font-family: Helvetica,Arial,sans-serif; font-size:14px; line-height: 21px; color:#000000; text-align: center; text-decoration: none; font-weight: bold;">
+                                                Store Locator
+                                              </a>
+                                            </td>
+                                          </tr>
+                                        </table>
+                                      </th>
                                     </tr>
                                   </table>
-                                </td>
-                              </tr>
-                            </table>
-                          </td>
-                        </tr>
-                      </table>   
+                                <!--[if mso]>
+                              </td>
+                            </tr>
+                          </table>
+                          <![endif]-->
+                          </div>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+        <!-- Logo + Menu + VIB ends -->
 
-        <!-- Emailcontent -->
-        </td>
-      </tr>
-    </table>
-  </center>
-  <style type="text/css">
-    #secdiv #new-gmail-hack {display: block  !important;}
-    #MessageWebViewDiv #new-gmail-hack {display: block  !important;} 
-    u + #new-gmail-hack {
-      display: block  !important;
-    }
-  </style>
-
-</body>
+            <!-- Emailcontent -->
+          </td>
+        </tr>
+      </table>
+    </center>
+  </body>
 </html>
