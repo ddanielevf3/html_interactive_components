@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Animated GIF — Interactive Email Modules</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;0,700;1,500;1,600&family=Public+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<script src="../assets/nav.js" defer></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../index.html">
+      <span class="logo-mark">
+        <img src="../assets/vodafonethree-logo.svg" alt="VodafoneThree" width="59" height="30">
+      </span>
+      <span class="logo-text">Interactive Email<small>Account Manager &amp; Designer</small></span>
+    </a>
+    <nav class="topnav" aria-label="Main menu">
+      <a class="nav-link" href="../index.html#intro">Introduction</a>
+            <details class="nav-dropdown current-section">
+        <summary>Module catalog<span class="chev">▾</span></summary>
+        <div class="dropdown-panel">
+          <a href="../modules/carousel.html">Carousel / slider</a>
+          <a href="../modules/accordion.html">Accordion / tab</a>
+          <a href="../modules/animations_css.html">CSS Animations</a>
+          <a href="../modules/hotspot.html">Interactive Hotspot</a>
+          <a href="../modules/hamburger-menu.html">Hamburger menu</a>
+          <a href="../modules/countdown.html">Live Countdown</a>
+          <a href="../modules/gif.html" class="current">Animated GIF</a>
+          <a href="../modules/video.html">Native Video</a>
+          <a href="../modules/amp-for-email.html">Form / AMP for Email</a>
+          <a href="../modules/scratch-card.html">Scratch card &amp; gamification</a>
+        </div>
+      </details>
+      <a class="nav-link" href="../index.html#matrix">Support matrix</a>
+      <a class="nav-link" href="../index.html#fallback">Fallback strategy</a>
+      <a class="nav-link" href="../index.html#am">Stakeholder alignment</a>
+    </nav>
+
+    <details class="mobile-menu">
+      <summary class="hamburger-btn" aria-label="Menu">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </summary>
+      <div class="mobile-menu-panel">
+        <a href="../index.html#intro">Introduction</a>
+        <div class="mm-group">Module catalog</div>
+        <a class="sub" href="../modules/carousel.html">Carousel / slider</a>
+        <a class="sub" href="../modules/accordion.html">Accordion / tab</a>
+        <a class="sub" href="../modules/animations_css.html">CSS Animations</a>
+        <a class="sub" href="../modules/hotspot.html">Interactive Hotspot</a>
+        <a class="sub" href="../modules/hamburger-menu.html">Hamburger menu</a>
+        <a class="sub" href="../modules/countdown.html">Live Countdown</a>
+        <a class="sub" href="../modules/gif.html">Animated GIF</a>
+        <a class="sub" href="../modules/video.html">Native Video</a>
+        <a class="sub" href="../modules/amp-for-email.html">Form / AMP for Email</a>
+        <a class="sub" href="../modules/scratch-card.html">Scratch card &amp; gamification</a>
+        <a href="../index.html#matrix">Support matrix</a>
+        <a href="../index.html#fallback">Fallback strategy</a>
+        <a href="../index.html#am">Stakeholder alignment</a>
+      </div>
+    </details>
+  </div>
+</header>
+
+<div class="page-wrap">
+  <main>
+    <a class="back-link" href="../index.html#catalogo">&larr; Module catalog</a>
+
+    <div class="module-header">
+      <h1>Animated GIF</h1>
+      <span class="support-inline wide">universal support</span>
+    </div>
+    <div class="eyebrow">Interactive module &middot; reference sheet</div>
+
+
+        <p>Not "interactivity" in the technical sense, but the most reliable tool for bringing
+        motion to an email: it's an image format, so every client displays it (as long as
+        images are enabled). No risk of a broken fallback.</p>
+        <p><strong>When to propose it:</strong> any time "100% safe" motion is needed, as an
+        alternative to more fragile CSS animations.</p>
+        <p><strong>Fallback:</strong> as with the countdown, no dedicated fallback is needed —
+        it's an image like any other; a descriptive <code>alt</code> is enough.</p>
+        
+
+    <div class="support-detail" style="margin:22px 0 24px;font-size:13px;">
+      <div class="row"><span class="k yes">supported</span><span class="v">all major clients — it's technically an image</span></div>
+      <div class="row"><span class="k no">fallback</span><span class="v">no client-specific gap: the only limit is the recipient having images disabled</span></div>
+    </div>
+
+    <section class="page-notes">
+      <h2>Additional notes</h2>
+      <p class="note">Best practices for exporting a lightweight, reliable animated GIF —
+      compiled from Litmus's guidance on keeping animated GIFs small in email.</p>
+
+      <div class="req-group">File weight</div>
+      <ul class="req-list">
+        <li>Target under 1MB per GIF — this is the threshold that actually keeps load times
+        fast on mobile data, not just "technically allowed"</li>
+        <li>5MB is the hard ceiling: heavier files risk being clipped or delayed by webmail
+        clients and blow up total email weight on slow connections</li>
+        <li>Enable transparency where possible — pixels that don't change between frames
+        don't need to be redrawn, which alone can cut file size by a third or more</li>
+      </ul>
+
+      <div class="req-group">Why avoid gradients</div>
+      <ul class="req-list">
+        <li>GIF supports a maximum of 256 colors per frame — a smooth gradient needs far more
+        tonal steps than that to render cleanly</li>
+        <li>Without enough dithering, the limited palette can't represent the in-between tones,
+        so gradients render as visible banding (hard stripes instead of a smooth transition)</li>
+        <li>Dithering can hide the banding, but the smoother the gradient needs to look, the
+        higher the dither percentage required — and more dithering means a heavier file</li>
+        <li>Flat, illustration-style color is the safer default: it compresses far better than
+        photography or gradients, which can end up over 20&times; heavier for the same frame</li>
+        <li>If a photo or gradient is unavoidable, a monochrome color overlay that reduces the
+        palette can cut file size by around 70% versus the untouched original</li>
+      </ul>
+
+      <div class="req-group">Other ways to keep the file light</div>
+      <ul class="req-list">
+        <li>Cut between frames instead of fading — fade transitions can make a file up to
+        ~8&times; heavier because of the extra in-between frames and color blending</li>
+        <li>Drop duplicate or redundant frames, and skip every second (or fourth) frame when
+        converting from video, then compensate by increasing the per-frame delay to keep the
+        original speed</li>
+        <li>Use adaptive color reduction (samples the colors actually dominant in the image)
+        rather than a fixed palette</li>
+        <li>Keep the color table as small as the content allows: roughly 64&ndash;128 colors
+        for flat illustrations, 128&ndash;256 for photo- or video-derived frames</li>
+        <li>Apply 20&ndash;40% lossy compression on export — a small quality trade-off for a
+        meaningfully smaller file</li>
+      </ul>
+
+      <p class="footnote" style="margin-top:14px;">Source: Litmus — <a href="https://www.litmus.com/blog/animated-gifs-in-email-10-tips-for-keeping-files-sizes-small" target="_blank" rel="noopener">"10 Tips for Keeping Animated GIF File Sizes Small"</a>.</p>
+    </section>
+
+    <div class="pagenav">
+      <a href="../modules/countdown.html"><span class="dir">&larr; Previous</span>Live Countdown</a>
+      <span class="spacer"></span>
+      <a class="next" href="../modules/video.html"><span class="dir">Next &rarr;</span>Native Video</a>
+    </div>
+  </main>
+</div>
+
+</body>
+</html>

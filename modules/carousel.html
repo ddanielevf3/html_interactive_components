@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Carousel / slider — Interactive Email Modules</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;0,700;1,500;1,600&family=Public+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<script src="../assets/nav.js" defer></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../index.html">
+      <span class="logo-mark">
+        <img src="../assets/vodafonethree-logo.svg" alt="VodafoneThree" width="59" height="30">
+      </span>
+      <span class="logo-text">Interactive Email<small>Account Manager &amp; Designer</small></span>
+    </a>
+    <nav class="topnav" aria-label="Main menu">
+      <a class="nav-link" href="../index.html#intro">Introduction</a>
+      <details class="nav-dropdown current-section">
+        <summary>Module catalog<span class="chev">▾</span></summary>
+        <div class="dropdown-panel">
+          <a href="../modules/carousel.html" class="current">Carousel / slider</a>
+          <a href="../modules/accordion.html">Accordion / tab</a>
+          <a href="../modules/animations_css.html">CSS Animations</a>
+          <a href="../modules/hotspot.html">Interactive Hotspot</a>
+          <a href="../modules/hamburger-menu.html">Hamburger menu</a>
+          <a href="../modules/countdown.html">Live Countdown</a>
+          <a href="../modules/gif.html">Animated GIF</a>
+          <a href="../modules/video.html">Native Video</a>
+          <a href="../modules/amp-for-email.html">Form / AMP for Email</a>
+          <a href="../modules/scratch-card.html">Scratch card &amp; gamification</a>
+        </div>
+      </details>
+      <a class="nav-link" href="../index.html#matrix">Support matrix</a>
+      <a class="nav-link" href="../index.html#fallback">Fallback strategy</a>
+      <a class="nav-link" href="../index.html#am">Stakeholder alignment</a>
+    </nav>
+
+    <details class="mobile-menu">
+      <summary class="hamburger-btn" aria-label="Menu">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </summary>
+      <div class="mobile-menu-panel">
+        <a href="../index.html#intro">Introduction</a>
+        <div class="mm-group">Module catalog</div>
+        <a class="sub current" href="../modules/carousel.html">Carousel / slider</a>
+        <a class="sub" href="../modules/accordion.html">Accordion / tab</a>
+        <a class="sub" href="../modules/animations_css.html">CSS Animations</a>
+        <a class="sub" href="../modules/hotspot.html">Interactive Hotspot</a>
+        <a class="sub" href="../modules/hamburger-menu.html">Hamburger menu</a>
+        <a class="sub" href="../modules/countdown.html">Live Countdown</a>
+        <a class="sub" href="../modules/gif.html">Animated GIF</a>
+        <a class="sub" href="../modules/video.html">Native Video</a>
+        <a class="sub" href="../modules/amp-for-email.html">Form / AMP for Email</a>
+        <a class="sub" href="../modules/scratch-card.html">Scratch card &amp; gamification</a>
+        <a href="../index.html#matrix">Support matrix</a>
+        <a href="../index.html#fallback">Fallback strategy</a>
+        <a href="../index.html#am">Stakeholder alignment</a>
+      </div>
+    </details>
+  </div>
+</header>
+
+<div class="page-wrap">
+  <main>
+    <a class="back-link" href="../index.html#catalogo">&larr; Module catalog</a>
+
+    <div class="module-header">
+      <h1>Carousel / slider</h1>
+      <span class="support-inline mixed">mixed support</span>
+    </div>
+    <div class="eyebrow">Interactive module &middot; reference sheet</div>
+
+
+        <p>Rotates several images or slides inside a single block, typically via pure CSS
+        (no JavaScript: emails don't execute it). Great for showing more products in the
+        space of a single banner — different angles of a product, photos from an event,
+        several articles inside a single hero image.</p>
+        <p><strong>When to propose it:</strong> an opening hero with 2-4 products, editorial
+        content with several visuals to cycle through. On mobile, always keep the landscape
+        format: forcing portrait needs too much extra code and puts the email's
+        deliverability at risk.</p>
+        <p><strong>Fallback:</strong> a single static image summarising the carousel's content
+        (not a GIF, which only a few clients support) — if none is specified, the client
+        automatically shows the first slide.</p>
+        
+    <div class="demo-section">
+      <div class="section-label">Live demo</div>
+      <p class="demo-note">Same markup as the internal component library — images are placeholders, to be replaced.</p>
+      <div class="demo-group">With navigation arrows</div>
+      <div class="demo-block">
+        <p class="demo-label">Carousel with navigation</p>
+        <div class="demo-frame-wrap">
+          <iframe src="demos/3imgnav.html" title="Carousel with navigation" width="600" height="400" class="resptab" style="width:600px;max-width:600px;" loading="lazy" scrolling="no" frameborder="0"></iframe>
+        </div>
+      </div>
+      <div class="demo-group">With navigation and dots</div>
+      <div class="demo-block">
+        <p class="demo-label">Carousel with navigation and dots</p>
+        <div class="demo-frame-wrap">
+          <iframe src="demos/3imgnavdots.html" title="Carousel with navigation and dots" width="600" height="400" class="resptab" style="width:600px;max-width:600px;" loading="lazy" scrolling="no" frameborder="0"></iframe>
+        </div>
+      </div>
+      <div class="demo-group">Outlook.com</div>
+      <div class="demo-block">
+        <p class="demo-label">Carousel Outlook.com</p>
+        <div class="demo-frame-wrap">
+          <iframe src="demos/carnavdot_OLweb.html" title="Carousel Outlook.com" width="600" height="431" class="resptab" style="width:600px;max-width:600px;" loading="lazy" scrolling="no" frameborder="0"></iframe>
+        </div>
+      </div>
+      <div class="demo-group">With thumbnails</div>
+      <div class="demo-block">
+        <p class="demo-label">Carousel with thumbnails — 3 images</p>
+        <div class="demo-frame-wrap">
+          <iframe src="demos/3imgthumb.html" title="Carousel with thumbnails — 3 images" width="600" height="534" class="resptab" style="width:600px;max-width:600px;" loading="lazy" scrolling="no" frameborder="0"></iframe>
+        </div>
+      </div>
+      <div class="demo-block">
+        <p class="demo-label">Carousel with thumbnails — 4 images</p>
+        <div class="demo-frame-wrap">
+          <iframe src="demos/thumbcar.html" title="Carousel with thumbnails — 4 images" width="600" height="500" class="resptab" style="width:600px;max-width:600px;" loading="lazy" scrolling="no" frameborder="0"></iframe>
+        </div>
+      </div>
+      <div class="demo-group">Animated navigation and thumbnails</div>
+      <div class="demo-block">
+        <p class="demo-label">Animated carousel navigation and thumbnails — 3 images</p>
+        <div class="demo-frame-wrap">
+          <iframe src="demos/animcar_navthumb3img.html" title="Animated carousel navigation and thumbnails — 3 images" width="600" height="500" class="resptab" style="width:600px;max-width:600px;" loading="lazy" scrolling="no" frameborder="0"></iframe>
+        </div>
+      </div>
+      <div class="demo-block">
+        <p class="demo-label">Animated carousel navigation and thumbnails — 4 images</p>
+        <div class="demo-frame-wrap">
+          <iframe src="demos/animcar_navthumb.html" title="Animated carousel navigation and thumbnails — 4 images" width="600" height="500" class="resptab" style="width:600px;max-width:600px;" loading="lazy" scrolling="no" frameborder="0"></iframe>
+        </div>
+      </div>
+      <div class="demo-group">Simple Slide (pure CSS transition)</div>
+      <div class="demo-block">
+        <p class="demo-label">Transition effect</p>
+        <div class="demo-frame-wrap">
+          <iframe src="demos/3slidetrans.html" title="Transition effect" width="600" height="400" class="resptab" style="width:600px;max-width:600px;" loading="lazy" scrolling="no" frameborder="0"></iframe>
+        </div>
+      </div>
+      <div class="demo-block">
+        <p class="demo-label">CSS effect</p>
+        <div class="demo-frame-wrap">
+          <iframe src="demos/3simpleslide.html" title="CSS effect" width="600" height="400" class="resptab" style="width:600px;max-width:600px;" loading="lazy" scrolling="no" frameborder="0"></iframe>
+        </div>
+      </div>
+      <div class="demo-block">
+        <p class="demo-label">Fade effect</p>
+        <div class="demo-frame-wrap">
+          <iframe src="demos/3slidefade.html" title="Fade effect" width="600" height="400" class="resptab" style="width:600px;max-width:600px;" loading="lazy" scrolling="no" frameborder="0"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <div class="support-detail" style="margin:22px 0 24px;font-size:13px;">
+      <div class="row"><span class="k yes">supported</span><span class="v">Apple Mail, Outlook for Mac (2011/2016), web browser, iOS Mail</span></div>
+      <div class="row"><span class="k no">fallback</span><span class="v">Outlook Windows, Gmail (web and app), Outlook.com, Office 365, Google Apps, Yahoo Mail, AOL</span></div>
+    </div>
+
+    <div class="client-table-wrap">
+      <h3>Client support table</h3>
+      <p class="note">Source: internal documentation &mdash; &ldquo;Carousels&rdquo; page.</p>
+      <div class="matrix-wrap">
+        <table class="client-table">
+          <thead><tr><th>Email client</th><th>Outcome</th></tr></thead>
+          <tbody>
+          <tr><td>Apple Mail 7, Apple Mail 8</td><td><span class="pill-wide y">Yes</span></td></tr>
+          <tr><td>Outlook 2011 and Outlook 2016 for Mac</td><td><span class="pill-wide y">Yes</span></td></tr>
+          <tr><td>Web browser — “View online” button</td><td><span class="pill-wide y">Yes</span></td></tr>
+          <tr><td>iPad and iPad mini (iOS)</td><td><span class="pill-wide y">Yes</span></td></tr>
+          <tr><td>iPhone (iOS)</td><td><span class="pill-wide y">Yes</span></td></tr>
+          <tr><td>Outlook 2000, 2002, 2003, 2007, 2010, 2013 and 2016</td><td><span class="pill-wide fb">Fallback</span></td></tr>
+          <tr><td>AOL (Internet Explorer)</td><td><span class="pill-wide fb">Fallback</span></td></tr>
+          <tr><td>Gmail App (iPhone, Windows Mobile and Android)</td><td><span class="pill-wide fb">Fallback</span></td></tr>
+          <tr><td>Gmail (webmail)</td><td><span class="pill-wide fb">Fallback</span></td></tr>
+          <tr><td>Google Apps</td><td><span class="pill-wide fb">Fallback</span></td></tr>
+          <tr><td>Office 365</td><td><span class="pill-wide fb">Fallback</span></td></tr>
+          <tr><td>Outlook.com</td><td><span class="pill-wide fb">Fallback</span></td></tr>
+          <tr><td>Yahoo! Mail</td><td><span class="pill-wide fb">Fallback</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <section class="page-notes">
+      <h2>Additional notes</h2>
+      <p class="note">Per-variant technical requirements, taken from the internal component library.</p>
+      <p class="note">Image dimensions (all variants): 600px wide, retina (x2) at 1200px. Height is flexible.</p>
+      <div class="req-group">With navigation arrows</div>
+      <ul class="req-list">
+        <li>3, 4 or 6 images in retina (x2) format</li>
+        <li>2 navigation icons in retina (x2) format</li>
+        <li>1 fallback image in retina (x2) format</li>
+      </ul>
+      <div class="req-group">With arrows and dots</div>
+      <ul class="req-list">
+        <li>Same requirements as the arrows version — the dots are handled purely via CSS, with no extra assets</li>
+      </ul>
+      <div class="req-group">Outlook.com</div>
+      <ul class="req-list">
+        <li>3, 4 or 6 images in retina (x2) format</li>
+        <li>1 fallback image in retina (x2) format — no navigation icon required</li>
+      </ul>
+      <div class="req-group">With thumbnails (static or animated)</div>
+      <ul class="req-list">
+        <li>3, 4 or 6 images in retina (x2) format</li>
+        <li>3, 4 or 6 thumbnails in retina (x2) format — matching the number of images</li>
+        <li>1 fallback image in retina (x2) format — the thumbnails themselves act as navigation</li>
+      </ul>
+      <div class="req-group">Simple Slide (pure CSS transition)</div>
+      <ul class="req-list">
+        <li>3, 4 or 6 images in retina (x2) format</li>
+        <li>1 fallback image in retina (x2) format</li>
+        <li>Active only on WebKit-based clients: iOS Mail, Apple Mail, Outlook for iOS and Mac</li>
+      </ul>
+      <p class="footnote" style="margin-top:14px;">Source: internal Components Library.</p>
+    </section>
+
+    <div class="pagenav">
+      <a href="../modules/scratch-card.html"><span class="dir">&larr; Previous</span>Scratch card &amp; gamification</a>
+      <span class="spacer"></span>
+      <a class="next" href="../modules/accordion.html"><span class="dir">Next &rarr;</span>Accordion / tab</a>
+    </div>
+  </main>
+</div>
+
+</body>
+</html>

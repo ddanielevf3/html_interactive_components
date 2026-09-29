@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CSS Animations (hover & flip) — Interactive Email Modules</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;0,700;1,500;1,600&family=Public+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<script src="../assets/nav.js" defer></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../index.html">
+      <span class="logo-mark">
+        <img src="../assets/vodafonethree-logo.svg" alt="VodafoneThree" width="59" height="30">
+      </span>
+      <span class="logo-text">Interactive Email<small>Account Manager &amp; Designer</small></span>
+    </a>
+    <nav class="topnav" aria-label="Main menu">
+      <a class="nav-link" href="../index.html#intro">Introduction</a>
+      <details class="nav-dropdown current-section">
+        <summary>Module catalog<span class="chev">▾</span></summary>
+        <div class="dropdown-panel">
+          <a href="../modules/carousel.html">Carousel / slider</a>
+          <a href="../modules/accordion.html">Accordion / tab</a>
+          <a href="../modules/animations_css.html" class="current">CSS Animations</a>
+          <a href="../modules/hotspot.html">Interactive Hotspot</a>
+          <a href="../modules/hamburger-menu.html">Hamburger menu</a>
+          <a href="../modules/countdown.html">Live Countdown</a>
+          <a href="../modules/gif.html">Animated GIF</a>
+          <a href="../modules/video.html">Native Video</a>
+          <a href="../modules/amp-for-email.html">Form / AMP for Email</a>
+          <a href="../modules/scratch-card.html">Scratch card &amp; gamification</a>
+        </div>
+      </details>
+      <a class="nav-link" href="../index.html#matrix">Support matrix</a>
+      <a class="nav-link" href="../index.html#fallback">Fallback strategy</a>
+      <a class="nav-link" href="../index.html#am">Stakeholder alignment</a>
+    </nav>
+
+    <details class="mobile-menu">
+      <summary class="hamburger-btn" aria-label="Menu">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </summary>
+      <div class="mobile-menu-panel">
+        <a href="../index.html#intro">Introduction</a>
+        <div class="mm-group">Module catalog</div>
+        <a class="sub" href="../modules/carousel.html">Carousel / slider</a>
+        <a class="sub" href="../modules/accordion.html">Accordion / tab</a>
+        <a class="sub current" href="../modules/animations_css.html">CSS Animations</a>
+        <a class="sub" href="../modules/hotspot.html">Interactive Hotspot</a>
+        <a class="sub" href="../modules/hamburger-menu.html">Hamburger menu</a>
+        <a class="sub" href="../modules/countdown.html">Live Countdown</a>
+        <a class="sub" href="../modules/gif.html">Animated GIF</a>
+        <a class="sub" href="../modules/video.html">Native Video</a>
+        <a class="sub" href="../modules/amp-for-email.html">Form / AMP for Email</a>
+        <a class="sub" href="../modules/scratch-card.html">Scratch card &amp; gamification</a>
+        <a href="../index.html#matrix">Support matrix</a>
+        <a href="../index.html#fallback">Fallback strategy</a>
+        <a href="../index.html#am">Stakeholder alignment</a>
+      </div>
+    </details>
+  </div>
+</header>
+
+<div class="page-wrap">
+  <main>
+    <a class="back-link" href="../index.html#catalogo">&larr; Module catalog</a>
+
+    <div class="module-header">
+      <h1>CSS Animations (hover &amp; flip)</h1>
+      <span class="support-inline narrow">limited support</span>
+    </div>
+    <div class="eyebrow">Interactive module &middot; reference sheet</div>
+
+
+        <p>The CSS <code>animation</code> property applied to individual elements (images,
+        spans, divs) — spinning icons, micro-animations on a call to action, an image swap
+        on mouse hover, a "card flip" effect. No JavaScript needed (which isn't executed in
+        emails anyway): it's just CSS/HTML already present in the template, so it works as a
+        pure enhancement for whoever supports it.</p>
+        <p><strong>Careful:</strong> <strong>hover doesn't exist on touch</strong> — on
+        smartphones and tablets (the majority of email opens) an effect tied only to hover
+        never triggers. Use it only for predominantly desktop campaigns (B2B, internal
+        newsletters), never as the central effect for a consumer audience.</p>
+        <p><strong>Fallback:</strong> as with the accordion, where it isn't supported the
+        whole animation is simply shown as static content.</p>
+        
+    <div class="demo-section">
+      <div class="section-label">Live demo</div>
+      <p class="demo-note">Same markup as the internal component library — images are placeholders, to be replaced.</p>
+      <div class="demo-block">
+        <p class="demo-label">CSS Animations</p>
+        <div class="demo-frame-wrap">
+          <iframe src="demos/css.html" title="CSS Animations" width="600" height="533" class="resptab" style="width:600px;max-width:600px;" loading="lazy" scrolling="no" frameborder="0"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <div class="support-detail" style="margin:22px 0 24px;font-size:13px;">
+      <div class="row"><span class="k yes">supported</span><span class="v">Apple Mail, web browser, iOS Mail</span></div>
+      <div class="row"><span class="k no">fallback</span><span class="v">Outlook Windows, Outlook for Mac, Gmail (web and app), Outlook.com, Office 365, Google Apps, Yahoo Mail, AOL</span></div>
+    </div>
+
+    <div class="client-table-wrap">
+      <h3>Client support table</h3>
+      <p class="note">Source: internal documentation &mdash; &ldquo;CSS Animations&rdquo; page.</p>
+      <div class="matrix-wrap">
+        <table class="client-table">
+          <thead><tr><th>Email client</th><th>Outcome</th></tr></thead>
+          <tbody>
+          <tr><td>Apple Mail 7, Apple Mail 8</td><td><span class="pill-wide y">Yes</span></td></tr>
+          <tr><td>Gmail Webmail</td><td><span class="pill-wide fb">Fallback</span></td></tr>
+          <tr><td>Web browser — “View online” button</td><td><span class="pill-wide y">Yes</span></td></tr>
+          <tr><td>iPad and iPad mini (iOS)</td><td><span class="pill-wide y">Yes</span></td></tr>
+          <tr><td>iPhone (iOS)</td><td><span class="pill-wide y">Yes</span></td></tr>
+          <tr><td>Outlook 2000, 2002, 2003, 2007, 2010, 2013 and 2016</td><td><span class="pill-wide fb">Fallback</span></td></tr>
+          <tr><td>AOL (Internet Explorer)</td><td><span class="pill-wide fb">Fallback</span></td></tr>
+          <tr><td>Gmail App (iPhone, Windows Mobile and Android)</td><td><span class="pill-wide fb">Fallback</span></td></tr>
+          <tr><td>iOS Mail</td><td><span class="pill-wide y">Yes</span></td></tr>
+          <tr><td>Gmail</td><td><span class="pill-wide fb">Fallback</span></td></tr>
+          <tr><td>Google Apps</td><td><span class="pill-wide fb">Fallback</span></td></tr>
+          <tr><td>Office 365</td><td><span class="pill-wide fb">Fallback</span></td></tr>
+          <tr><td>Outlook.com</td><td><span class="pill-wide fb">Fallback</span></td></tr>
+          <tr><td>Yahoo! Mail</td><td><span class="pill-wide fb">Fallback</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <section class="page-notes">
+      <h2>Additional notes</h2>
+      <p class="note">Integration requirements, taken from the internal component library.</p>
+      <ul class="req-list">
+        <li>The <span style="font-style: italic">&lt;style&gt;</span> block must be copied into the email's <span style="font-style: italic">&lt;head&gt;</span>; the HTML goes in a dedicated section of the body, without nesting it inside existing tables.</li>
+        <li>Before applying an effect, check whether the element (text or image) already has a <span style="font-style: italic">class</span> attribute: two classes on the same element cause conflicts. If it doesn't have one, create it and add the animation class, without the leading dot.</li>
+      </ul>
+      <p class="footnote">Source: internal Components Library.</p>
+    </section>
+
+    <div class="pagenav">
+      <a href="../modules/accordion.html"><span class="dir">&larr; Previous</span>Accordion / tab</a>
+      <span class="spacer"></span>
+      <a class="next" href="../modules/hotspot.html"><span class="dir">Next &rarr;</span>Interactive Hotspot</a>
+    </div>
+  </main>
+</div>
+
+</body>
+</html>

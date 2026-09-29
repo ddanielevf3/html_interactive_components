@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Scratch card & gamification — Interactive Email Modules</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;0,700;1,500;1,600&family=Public+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<script src="../assets/nav.js" defer></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../index.html">
+      <span class="logo-mark">
+        <img src="../assets/vodafonethree-logo.svg" alt="VodafoneThree" width="59" height="30">
+      </span>
+      <span class="logo-text">Interactive Email<small>Account Manager &amp; Designer</small></span>
+    </a>
+    <nav class="topnav" aria-label="Main menu">
+      <a class="nav-link" href="../index.html#intro">Introduction</a>
+      <details class="nav-dropdown current-section">
+        <summary>Module catalog<span class="chev">▾</span></summary>
+        <div class="dropdown-panel">
+          <a href="../modules/carousel.html">Carousel / slider</a>
+          <a href="../modules/accordion.html">Accordion / tab</a>
+          <a href="../modules/animations_css.html">CSS Animations</a>
+          <a href="../modules/hotspot.html">Interactive Hotspot</a>
+          <a href="../modules/hamburger-menu.html">Hamburger menu</a>
+          <a href="../modules/countdown.html">Live Countdown</a>
+          <a href="../modules/gif.html">Animated GIF</a>
+          <a href="../modules/video.html">Native Video</a>
+          <a href="../modules/amp-for-email.html">Form / AMP for Email</a>
+          <a href="../modules/scratch-card.html" class="current">Scratch card &amp; gamification</a>
+        </div>
+      </details>
+      <a class="nav-link" href="../index.html#matrix">Support matrix</a>
+      <a class="nav-link" href="../index.html#fallback">Fallback strategy</a>
+      <a class="nav-link" href="../index.html#am">Stakeholder alignment</a>
+    </nav>
+
+    <details class="mobile-menu">
+      <summary class="hamburger-btn" aria-label="Menu">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </summary>
+      <div class="mobile-menu-panel">
+        <a href="../index.html#intro">Introduction</a>
+        <div class="mm-group">Module catalog</div>
+        <a class="sub" href="../modules/carousel.html">Carousel / slider</a>
+        <a class="sub" href="../modules/accordion.html">Accordion / tab</a>
+        <a class="sub" href="../modules/animations_css.html">CSS Animations</a>
+        <a class="sub" href="../modules/hotspot.html">Interactive Hotspot</a>
+        <a class="sub" href="../modules/hamburger-menu.html">Hamburger menu</a>
+        <a class="sub" href="../modules/countdown.html">Live Countdown</a>
+        <a class="sub" href="../modules/gif.html">Animated GIF</a>
+        <a class="sub" href="../modules/video.html">Native Video</a>
+        <a class="sub" href="../modules/amp-for-email.html">Form / AMP for Email</a>
+        <a class="sub" href="../modules/scratch-card.html">Scratch card &amp; gamification</a>
+        <a href="../index.html#matrix">Support matrix</a>
+        <a href="../index.html#fallback">Fallback strategy</a>
+        <a href="../index.html#am">Stakeholder alignment</a>
+      </div>
+    </details>  </div>
+</header>
+
+<div class="page-wrap">
+  <main>
+    <a class="back-link" href="../index.html#catalogo">&larr; Module catalog</a>
+
+    <div class="module-header">
+      <h1>Scratch card &amp; gamification</h1>
+      <span class="support-inline narrow">very limited support</span>
+    </div>
+    <div class="eyebrow">Interactive module &middot; reference sheet</div>
+
+
+        <p>A "scratch and win" or playful reveal effect for uncovering a discount code. One of
+        the most visually striking modules and, along with video, one of the least supported:
+        realistically reliable only in Apple Mail.</p>
+        <p><strong>When to propose it:</strong> campaigns aimed at strongly Apple-leaning user
+        bases (fashion, premium lifestyle), always with the prize already visible in the
+        fallback.</p>
+        <p><strong>Fallback:</strong> the prize/code must be shown already uncovered and
+        legible in the static version — never hidden behind an interaction that, in many
+        clients, can never happen.</p>
+        
+    <div class="demo-section">
+      <div class="section-label">Live demo</div>
+      <p class="demo-note">Same markup as the internal component library — images are placeholders, to be replaced.</p>
+      <div class="demo-block">
+        <p class="demo-label">Scratch card GIF</p>
+        <div class="demo-frame-wrap">
+          <iframe src="demos/scratchcard.html" title="Scratch card GIF" width="600" height="533" class="resptab" style="width:600px;max-width:600px;" loading="lazy" scrolling="no" frameborder="0"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <div class="support-detail" style="margin:22px 0 24px;font-size:13px;">
+      <div class="row"><span class="k yes">supported</span><span class="v">Apple Mail, web browser, iOS Mail</span></div>
+      <div class="row"><span class="k no">fallback</span><span class="v">Outlook Windows, Outlook for Mac, Gmail (web and app), Outlook.com, Office 365, Google Apps, Yahoo Mail, AOL</span></div>
+    </div>
+
+    <section class="page-notes">
+      <h2>Additional notes</h2>
+      <p class="note">Asset and flow requirements, taken from the internal component library.</p>
+      <ul class="req-list">
+        <li>1 GIF (no retina format required).</li>
+        <li>1 &ldquo;Scratch Me&rdquo; image in retina (x2) format.</li>
+        <li>The &ldquo;scratch and reveal&rdquo; happens on the landing page, not inside the email: clicking the cover image in the email leads to the landing page, where the recipient can scratch it to reveal the prize and the CTA button underneath.</li>
+      </ul>
+      <p class="footnote">Source: internal Components Library.</p>
+    </section>
+
+    <div class="pagenav">
+      <a href="../modules/amp-for-email.html"><span class="dir">&larr; Previous</span>Form / AMP for Email</a>
+      <span class="spacer"></span>
+      <a class="next" href="../modules/carousel.html"><span class="dir">Next &rarr;</span>Carousel / slider</a>
+    </div>
+  </main>
+</div>
+
+</body>
+</html>

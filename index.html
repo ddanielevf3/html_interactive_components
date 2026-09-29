@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Interactive Email Modules</title>
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;0,700;1,500;1,600&family=Public+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<script src="assets/nav.js" defer></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="index.html">
+      <span class="logo-mark">
+        <img src="assets/vodafonethree-logo.svg" alt="VodafoneThree" width="59" height="30">
+      </span>
+      <span class="logo-text">Interactive Email<small>Account Manager &amp; Designer</small></span>
+    </a>
+    <nav class="topnav" aria-label="Main menu">
+      <a class="nav-link" href="index.html#intro">Introduction</a>
+      <details class="nav-dropdown">
+        <summary>Module catalog<span class="chev">▾</span></summary>
+        <div class="dropdown-panel">
+          <a href="modules/carousel.html">Carousel / slider</a>
+          <a href="modules/accordion.html">Accordion / tab</a>
+          <a href="modules/animations_css.html">CSS Animations</a>
+          <a href="modules/hotspot.html">Interactive Hotspot</a>
+          <a href="modules/hamburger-menu.html">Hamburger menu</a>
+          <a href="modules/countdown.html">Live Countdown</a>
+          <a href="modules/gif.html">Animated GIF</a>
+          <a href="modules/video.html">Native Video</a>
+          <a href="modules/amp-for-email.html">Form / AMP for Email</a>
+          <a href="modules/scratch-card.html">Scratch card &amp; gamification</a>
+        </div>
+      </details>
+      <a class="nav-link" href="index.html#matrix">Support matrix</a>
+      <a class="nav-link" href="index.html#fallback">Fallback strategy</a>
+      <a class="nav-link" href="index.html#am">Stakeholder alignment</a>
+    </nav>
+
+    <details class="mobile-menu">
+      <summary class="hamburger-btn" aria-label="Menu">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </summary>
+      <div class="mobile-menu-panel">
+        <a href="index.html#intro">Introduction</a>
+        <div class="mm-group">Module catalog</div>
+        <a class="sub" href="modules/carousel.html">Carousel / slider</a>
+        <a class="sub" href="modules/accordion.html">Accordion / tab</a>
+        <a class="sub" href="modules/animations_css.html">CSS Animations</a>
+        <a class="sub" href="modules/hotspot.html">Interactive Hotspot</a>
+        <a class="sub" href="modules/hamburger-menu.html">Hamburger menu</a>
+        <a class="sub" href="modules/countdown.html">Live Countdown</a>
+        <a class="sub" href="modules/gif.html">Animated GIF</a>
+        <a class="sub" href="modules/video.html">Native Video</a>
+        <a class="sub" href="modules/amp-for-email.html">Form / AMP for Email</a>
+        <a class="sub" href="modules/scratch-card.html">Scratch card &amp; gamification</a>
+        <a href="index.html#matrix">Support matrix</a>
+        <a href="index.html#fallback">Fallback strategy</a>
+        <a href="index.html#am">Stakeholder alignment</a>
+      </div>
+    </details>
+  </div>
+</header>
+
+<div class="page-wrap">
+  <main>
+    <div class="eyebrow">Internal guide &middot; email marketing</div>
+    <h1 class="title">Interactive modules in emails</h1>
+    <p class="lede">
+      Carousels, accordions, hotspots, countdowns, video: all of it can be built into an
+      email, but no client treats it the same way. This guide is here to help you understand
+      what a campaign can actually do, what someone opening the email from Outlook will really
+      see versus Gmail or Apple Mail, and how to build every module so it works everywhere —
+      even when the "wow" effect doesn't fire.
+    </p>
+
+    <section id="intro">
+      <h2><span class="h-num">00</span>Introduction</h2>
+      <p class="section-intro">
+        A browser is a single, predictable environment. Inboxes are not: every email client
+        has its own rendering engine, often years old and never designed with interactivity
+        in mind. Outlook desktop for Windows, for instance, doesn't use a browser to draw the
+        HTML at all — it uses the Word engine. Gmail and Outlook.com open the email inside a
+        webview that filters out "risky" CSS and tags. Only Apple Mail (macOS and iOS) is a
+        genuine browser (WebKit), which is why it's almost always the most permissive client.
+      </p>
+      <p class="section-intro">
+        The result: the same interactive module can look spectacular on an iPhone and be
+        completely invisible on a company PC running Outlook. The golden rule is therefore
+        <strong>progressive enhancement</strong> — the email has to make sense and be complete
+        even for people who don't see the effect, which becomes a bonus for those who do.
+      </p>
+      <div class="callout">
+        <strong>Practical rule:</strong> use only one interactive module per email. Combining
+        several components (e.g. carousel + accordion) in the same message increases the risk
+        of CSS inheritance conflicts between them, with unpredictable effects on the final
+        rendering.
+      </div>
+      <p class="section-intro" style="margin-top:22px;">
+        "Premium" environments — web browsers (view online) and Apple devices, both desktop
+        and mobile (Apple Mail, Outlook for Mac) — deliver a smooth, complete experience. On
+        Outlook Windows and Android, the message still stays clear and coherent thanks to the
+        fallback images. Hence the advice: talk to whoever analyses the list data to understand
+        how many subscribers use "premium" clients, and design campaigns that genuinely put
+        interactivity to work for that slice of the audience.
+      </p>
+      <div class="marketshare">
+        <div class="ms-bar"><div class="track"><div class="fill" style="height:45.51%;background:var(--accent);"></div></div><div class="pct">45.51%</div><div class="name">Apple Mail</div></div>
+        <div class="ms-bar"><div class="track"><div class="fill" style="height:23.54%;background:var(--accent);"></div></div><div class="pct">23.54%</div><div class="name">Gmail</div></div>
+        <div class="ms-bar"><div class="track"><div class="fill" style="height:7%;background:var(--accent);"></div></div><div class="pct">7%</div><div class="name">Yahoo! Mail</div></div>
+        <div class="ms-bar"><div class="track"><div class="fill" style="height:5.67%;background:var(--accent);"></div></div><div class="pct">5.67%</div><div class="name">Outlook</div></div>
+        <div class="ms-bar"><div class="track"><div class="fill" style="height:60%;background:var(--yes);"></div></div><div class="pct">60%</div><div class="name">Mobile opens</div></div>
+        <div class="ms-bar"><div class="track"><div class="fill" style="height:40%;background:var(--yes);"></div></div><div class="pct">40%</div><div class="name">Desktop &amp; webmail</div></div>
+      </div>
+      <p class="ms-note">Open share by client and by platform — calculated on over 1.1 billion
+      opens, Litmus Email Analytics, February 2026. Apple Mail alone is therefore the single
+      most widely used client, and also the one with the broadest support for interactive
+      modules: a good reason not to treat it as "just another client" when building.</p>
+      <div class="tag-row">
+        <div class="tag-box am">
+          <span class="who">Account manager</span>
+          <p>Never present an interactive module as "guaranteed" to whoever is requesting the
+          campaign (brand, region, e-commerce) without specifying that the experience changes
+          from client to client. It's the first question anyone who's already had a bad
+          surprise in the past will ask.</p>
+        </div>
+        <div class="tag-box designer">
+          <span class="who">Designer</span>
+          <p>Always design the static version (the fallback) first, then add the interactivity
+          as a layer on top. If you start from the effect and try to "add" the fallback
+          afterwards, the fallback almost always ends up broken or incomplete.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="catalogo">
+      <h2><span class="h-num">01</span>Module catalog</h2>
+      <p class="section-intro">
+        Every module has its own dedicated page with a description, use cases, technical
+        requirements and fallback detail — and it's where examples, assets or internal notes
+        can be added later. The client-by-client comparison is still summarised in the matrix
+        at point 02.
+      </p>
+      <div class="catalog-grid">
+        <a class="catalog-card" href="modules/carousel.html">
+          <div class="cc-head"><h3>Carousel / slider</h3><span class="support-inline mixed">mixed</span></div>
+          <p>Rotates several images in a single block, via pure CSS.</p>
+          <span class="more">Open page →</span>
+        </a>
+        <a class="catalog-card" href="modules/accordion.html">
+          <div class="cc-head"><h3>Accordion / tab</h3><span class="support-inline mixed">mixed</span></div>
+          <p>Sections that expand on tap to compress long content.</p>
+          <span class="more">Open page →</span>
+        </a>
+        <a class="catalog-card" href="modules/animations_css.html">
+          <div class="cc-head"><h3>CSS Animations</h3><span class="support-inline narrow">limited</span></div>
+          <p>Micro-animations and hover effects via the CSS <code>animation</code> property.</p>
+          <span class="more">Open page →</span>
+        </a>
+        <a class="catalog-card" href="modules/hotspot.html">
+          <div class="cc-head"><h3>Interactive Hotspot</h3><span class="support-inline mixed">mixed</span></div>
+          <p>Clickable areas on an image that reveal detail on tap.</p>
+          <span class="more">Open page →</span>
+        </a>
+        <a class="catalog-card" href="modules/hamburger-menu.html">
+          <div class="cc-head"><h3>Hamburger menu</h3><span class="support-inline mixed">mixed</span></div>
+          <p>Navigation menu that collapses into an icon on mobile.</p>
+          <span class="more">Open page →</span>
+        </a>
+        <a class="catalog-card" href="modules/countdown.html">
+          <div class="cc-head"><h3>Live Countdown</h3><span class="support-inline wide">wide</span></div>
+          <p>Timer generated as an image: works almost everywhere.</p>
+          <span class="more">Open page →</span>
+        </a>
+        <a class="catalog-card" href="modules/gif.html">
+          <div class="cc-head"><h3>Animated GIF</h3><span class="support-inline wide">universal</span></div>
+          <p>The safest way to bring motion to an email.</p>
+          <span class="more">Open page →</span>
+        </a>
+        <a class="catalog-card" href="modules/video.html">
+          <div class="cc-head"><h3>Native Video</h3><span class="support-inline narrow">limited</span></div>
+          <p>Embedded video player, playable only in Apple Mail.</p>
+          <span class="more">Open page →</span>
+        </a>
+        <a class="catalog-card" href="modules/amp-for-email.html">
+          <div class="cc-head"><h3>Form / AMP for Email</h3><span class="support-inline narrow">some clients</span></div>
+          <p>Dynamic content and fillable forms, only in Gmail and Yahoo.</p>
+          <span class="more">Open page →</span>
+        </a>
+        <a class="catalog-card" href="modules/scratch-card.html">
+          <div class="cc-head"><h3>Scratch card</h3><span class="support-inline narrow">very limited</span></div>
+          <p>Scratch-and-reveal effect, reliable only in Apple Mail.</p>
+          <span class="more">Open page →</span>
+        </a>
+      </div>
+    </section>
+
+    <section id="matrix">
+      <h2><span class="h-num">02</span>Client support matrix</h2>
+      <p class="section-intro">
+        An indicative, industry-level estimate across desktop / web / mobile clients. Email
+        clients change rendering engine fairly often: before making a binding promise to
+        whoever commissioned the campaign, always verify with a real test on a tool such as
+        Litmus or Email on Acid. Click a module's name to open its dedicated page.
+      </p>
+      <div class="matrix-wrap">
+        <table class="matrix">
+          <thead>
+            <tr>
+              <th>Module</th>
+              <th>Outlook&nbsp;Windows</th>
+              <th>Outlook&nbsp;Mac</th>
+              <th>Web&nbsp;browser</th>
+              <th>Apple&nbsp;Mail&nbsp;/&nbsp;iOS</th>
+              <th>Gmail</th>
+              <th>Other*</th>
+            </tr>
+          </thead>
+          <tbody id="matrix-body"></tbody>
+        </table>
+      </div>
+      <div class="legend">
+        <span><span class="pill y" style="width:16px;height:16px;font-size:9px;">Y</span> supported</span>
+        <span><span class="pill p" style="width:16px;height:16px;font-size:9px;">P</span> partial</span>
+        <span><span class="pill n" style="width:16px;height:16px;font-size:9px;">N</span> not supported</span>
+      </div>
+      <p class="footnote">
+        *Outlook.com, Office 365, Google Apps, Yahoo Mail, AOL, Android. Exception: for
+        AMP dynamic forms/content, Yahoo Mail is fully supported even though it's grouped
+        here under "Other" — see the <a href="modules/amp-for-email.html">Form / AMP for Email</a> page.
+      </p>
+    </section>
+
+    <section id="fallback">
+      <h2><span class="h-num">03</span>Fallback strategy</h2>
+      <p class="section-intro">
+        The principle is always the same: whoever doesn't support the effect still has to see
+        the core message, not a gap. Two concrete examples — the detail for every module is on
+        its own dedicated page.
+      </p>
+
+      <h3 style="font-size:15px;margin:22px 0 10px;">Video</h3>
+      <div class="compare">
+        <div class="codeblock bad">
+          <div class="label">Without fallback</div>
+          <pre><span class="tag">&lt;video</span> <span class="attr">src</span>=<span class="str">"promo.mp4"</span><span class="tag">&gt;</span>
+<span class="tag">&lt;/video&gt;</span>
+<span class="cm">// on Outlook/Gmail: empty space</span></pre>
+        </div>
+        <div class="codeblock good">
+          <div class="label">With fallback</div>
+          <pre><span class="tag">&lt;video</span> <span class="attr">src</span>=<span class="str">"promo.mp4"</span>
+       <span class="attr">poster</span>=<span class="str">"preview.jpg"</span><span class="tag">&gt;</span>
+<span class="tag">&lt;/video&gt;</span>
+<span class="cm">// clickable preview → landing page</span></pre>
+        </div>
+      </div>
+
+      <h3 style="font-size:15px;margin:26px 0 10px;">Carousel</h3>
+      <div class="compare">
+        <div class="codeblock bad">
+          <div class="label">Without fallback</div>
+          <pre><span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"carousel"</span><span class="tag">&gt;</span>
+  <span class="cm">// CSS-animated slides only</span>
+<span class="tag">&lt;/div&gt;</span></pre>
+        </div>
+        <div class="codeblock good">
+          <div class="label">With fallback</div>
+          <pre><span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"carousel"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;img</span> <span class="attr">src</span>=<span class="str">"slide-1.jpg"</span> <span class="attr">alt</span>=<span class="str">""</span><span class="tag">&gt;</span>
+  <span class="cm">// first slide always visible as a base</span>
+<span class="tag">&lt;/div&gt;</span></pre>
+        </div>
+      </div>
+
+      <div class="tag-box designer" style="margin-top:22px;max-width:680px;">
+        <span class="who">Designer</span>
+        <p>Minimum test before every handoff: a "worst-case" client (Outlook desktop, Word
+        engine) and a "best-case" client (Apple Mail, full WebKit). If the message works at
+        both extremes, it works almost everywhere in between.</p>
+      </div>
+    </section>
+
+    <section id="am">
+      <h2><span class="h-num">04</span>Stakeholder alignment</h2>
+      <p class="section-intro">
+        Numbers useful for justifying the investment, and questions that whoever commissions
+        a campaign (brand manager, region, e-commerce, leadership) often asks when an
+        interactive module is proposed — with ready answers, without over-promising.
+      </p>
+
+      <div class="stat-groups">
+        <div class="stat-group">
+          <h3>Engagement</h3>
+          <div class="stat-grid">
+            <div class="stat-chip"><span class="num">+300%</span><span class="desc">CTR with interactive elements or embedded video</span></div>
+            <div class="stat-chip"><span class="num">+73%</span><span class="desc">click-to-open rate with interactive elements</span></div>
+            <div class="stat-chip"><span class="num">+520%</span><span class="desc">responses with interactive surveys/polls vs static links</span></div>
+            <div class="stat-chip"><span class="num">+80%</span><span class="desc">estimated engagement vs static emails</span></div>
+            <div class="stat-chip"><span class="num">60%</span><span class="desc">of consumers more inclined to engage with interactive content</span></div>
+          </div>
+        </div>
+        <div class="stat-group">
+          <h3>Conversions &amp; revenue</h3>
+          <div class="stat-grid">
+            <div class="stat-chip"><span class="num">2x</span><span class="desc">more conversions than static content</span></div>
+            <div class="stat-chip"><span class="num">+160%</span><span class="desc">conversion rate with in-email interactive forms/quizzes</span></div>
+            <div class="stat-chip"><span class="num">2x</span><span class="desc">revenue per recipient in interactive campaigns</span></div>
+            <div class="stat-chip"><span class="num">36:1</span><span class="desc">average ROI of the email channel overall</span></div>
+          </div>
+        </div>
+        <div class="stat-group">
+          <h3>Preferences &amp; differentiation</h3>
+          <div class="stat-grid">
+            <div class="stat-chip"><span class="num">91%</span><span class="desc">of recipients prefer interactive/visual content, yet &lt;20% of brands offer it</span></div>
+            <div class="stat-chip"><span class="num">88%</span><span class="desc">of marketers see it as an effective way to differentiate the brand</span></div>
+            <div class="stat-chip"><span class="num">+47% / +22%</span><span class="desc">engagement and loyalty with gamified content</span></div>
+          </div>
+        </div>
+      </div>
+      <p class="footnote" style="margin-bottom:26px;">
+        Figures drawn from internal material and cited industry studies (Martech Advisor and
+        others) — present them internally as market benchmarks, not as a guarantee for any
+        single campaign.
+      </p>
+
+      <div class="qa">
+        <div class="qa-item">
+          <div class="q">"Will the carousel/video/countdown work for all our subscribers?"</div>
+          <div class="a">No, and that should be said clearly upfront: it will work best for
+          part of the list (typically those on Apple Mail or Gmail) and will show an equivalent
+          static version to everyone else. The static version is still a complete email, not
+          an error.</div>
+        </div>
+        <div class="qa-item">
+          <div class="q">"Can we know in advance how many people will see the effect?"</div>
+          <div class="a">Only approximately, starting from the client distribution of their
+          own base (visible in the sending platform's reports). It's not a figure we guarantee
+          — present it as an estimate.</div>
+        </div>
+        <div class="qa-item">
+          <div class="q">"We want a fillable form/survey inside the email."</div>
+          <div class="a">Only possible with AMP for Email, and only for people opening from
+          Gmail or Yahoo: everyone else still needs a link to an external page with the same
+          form. It's a more expensive project and should be scoped as such, not as a standard
+          email.</div>
+        </div>
+        <div class="qa-item">
+          <div class="q">"Why can't we just test it on our own Outlook in the office?"</div>
+          <div class="a">Because it's almost always the most restrictive client that exists:
+          if an effect "seems to work" there, it will work everywhere; if it "doesn't work"
+          there, that's not a bug — it's the normal fallback to the static version, which still
+          needs to be checked.</div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      Internal documentation &middot; Email Marketing Team. Support percentages are indicative
+      estimates — always verify with a real test before treating them as final.
+    </footer>
+  </main>
+</div>
+
+<script>
+(function(){
+  var CLIENTS = ["outlookWin","outlookMac","web","appleMail","gmail","altri"];
+  var LABELS = {
+    "carousel":"Carousel / slider",
+    "accordion":"Accordion / tab",
+    "cssAnim":"CSS Animations (hover & flip)",
+    "hotspot":"Interactive Hotspot",
+    "hamburger":"Hamburger menu",
+    "countdown":"Live Countdown (image)",
+    "gif":"Animated GIF",
+    "video":"Native Video",
+    "amp":"Form / AMP for Email",
+    "scratch":"Scratch card & gamification"
+  };
+  var PAGES = {
+    "carousel":"modules/carousel.html",
+    "accordion":"modules/accordion.html",
+    "cssAnim":"modules/animations_css.html",
+    "hotspot":"modules/hotspot.html",
+    "hamburger":"modules/hamburger-menu.html",
+    "countdown":"modules/countdown.html",
+    "gif":"modules/gif.html",
+    "video":"modules/video.html",
+    "amp":"modules/amp-for-email.html",
+    "scratch":"modules/scratch-card.html"
+  };
+  var ORDER = ["carousel","accordion","cssAnim","hotspot","hamburger","countdown","gif","video","amp","scratch"];
+  var MATRIX = {
+    "carousel":{outlookWin:"n",outlookMac:"y",web:"y",appleMail:"y",gmail:"n",altri:"n"},
+    "accordion":{outlookWin:"n",outlookMac:"y",web:"y",appleMail:"y",gmail:"n",altri:"n"},
+    "cssAnim":{outlookWin:"n",outlookMac:"p",web:"y",appleMail:"y",gmail:"n",altri:"n"},
+    "hotspot":{outlookWin:"n",outlookMac:"y",web:"y",appleMail:"y",gmail:"p",altri:"n"},
+    "hamburger":{outlookWin:"n",outlookMac:"y",web:"y",appleMail:"y",gmail:"n",altri:"n"},
+    "countdown":{outlookWin:"y",outlookMac:"y",web:"y",appleMail:"y",gmail:"y",altri:"y"},
+    "gif":{outlookWin:"y",outlookMac:"y",web:"y",appleMail:"y",gmail:"y",altri:"y"},
+    "video":{outlookWin:"n",outlookMac:"p",web:"y",appleMail:"y",gmail:"n",altri:"n"},
+    "amp":{outlookWin:"n",outlookMac:"n",web:"n",appleMail:"n",gmail:"y",altri:"p"},
+    "scratch":{outlookWin:"n",outlookMac:"n",web:"y",appleMail:"y",gmail:"n",altri:"n"}
+  };
+
+  var body = document.getElementById("matrix-body");
+  var html = "";
+  ORDER.forEach(function(key){
+    var row = MATRIX[key];
+    html += '<tr><td><a href="' + PAGES[key] + '">' + LABELS[key] + "</a></td>";
+    CLIENTS.forEach(function(c){
+      var v = row[c];
+      var letter = v === "y" ? "Y" : v === "p" ? "P" : "N";
+      html += '<td><span class="pill ' + v + '">' + letter + "</span></td>";
+    });
+    html += "</tr>";
+  });
+  body.innerHTML = html;
+})();
+</script>
+</body>
+</html>

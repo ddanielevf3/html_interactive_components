@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Interactive Hotspot — Interactive Email Modules</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;0,700;1,500;1,600&family=Public+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<script src="../assets/nav.js" defer></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="../index.html">
+      <span class="logo-mark">
+        <img src="../assets/vodafonethree-logo.svg" alt="VodafoneThree" width="59" height="30">
+      </span>
+      <span class="logo-text">Interactive Email<small>Account Manager &amp; Designer</small></span>
+    </a>
+    <nav class="topnav" aria-label="Main menu">
+      <a class="nav-link" href="../index.html#intro">Introduction</a>
+            <details class="nav-dropdown current-section">
+        <summary>Module catalog<span class="chev">▾</span></summary>
+        <div class="dropdown-panel">
+          <a href="../modules/carousel.html">Carousel / slider</a>
+          <a href="../modules/accordion.html">Accordion / tab</a>
+          <a href="../modules/animations_css.html">CSS Animations</a>
+          <a href="../modules/hotspot.html" class="current">Interactive Hotspot</a>
+          <a href="../modules/hamburger-menu.html">Hamburger menu</a>
+          <a href="../modules/countdown.html">Live Countdown</a>
+          <a href="../modules/gif.html">Animated GIF</a>
+          <a href="../modules/video.html">Native Video</a>
+          <a href="../modules/amp-for-email.html">Form / AMP for Email</a>
+          <a href="../modules/scratch-card.html">Scratch card &amp; gamification</a>
+        </div>
+      </details>
+      <a class="nav-link" href="../index.html#matrix">Support matrix</a>
+      <a class="nav-link" href="../index.html#fallback">Fallback strategy</a>
+      <a class="nav-link" href="../index.html#am">Stakeholder alignment</a>
+    </nav>
+
+    <details class="mobile-menu">
+      <summary class="hamburger-btn" aria-label="Menu">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </summary>
+      <div class="mobile-menu-panel">
+        <a href="../index.html#intro">Introduction</a>
+        <div class="mm-group">Module catalog</div>
+        <a class="sub" href="../modules/carousel.html">Carousel / slider</a>
+        <a class="sub" href="../modules/accordion.html">Accordion / tab</a>
+        <a class="sub" href="../modules/animations_css.html">CSS Animations</a>
+        <a class="sub" href="../modules/hotspot.html">Interactive Hotspot</a>
+        <a class="sub" href="../modules/hamburger-menu.html">Hamburger menu</a>
+        <a class="sub" href="../modules/countdown.html">Live Countdown</a>
+        <a class="sub" href="../modules/gif.html">Animated GIF</a>
+        <a class="sub" href="../modules/video.html">Native Video</a>
+        <a class="sub" href="../modules/amp-for-email.html">Form / AMP for Email</a>
+        <a class="sub" href="../modules/scratch-card.html">Scratch card &amp; gamification</a>
+        <a href="../index.html#matrix">Support matrix</a>
+        <a href="../index.html#fallback">Fallback strategy</a>
+        <a href="../index.html#am">Stakeholder alignment</a>
+      </div>
+    </details>
+  </div>
+</header>
+
+<div class="page-wrap">
+  <main>
+    <a class="back-link" href="../index.html#catalogo">&larr; Module catalog</a>
+
+    <div class="module-header">
+      <h1>Interactive Hotspot</h1>
+      <span class="support-inline mixed">mixed support</span>
+    </div>
+    <div class="eyebrow">Interactive module &middot; reference sheet</div>
+
+
+        <p>Clickable areas layered on top of an image (e.g. points on a photo of an outfit
+        that reveal the price of each item), which the recipient discovers on mouse hover or
+        tap. They organise content, highlight key products and allow more calls to action
+        without visually crowding the email — and they generate engagement data that's useful
+        for optimising future campaigns.</p>
+        <p><strong>Reference figure:</strong> around 79% of email clients support the fully
+        interactive version of hotspots (internal source on client market share). On a base
+        analysed by Litmus with Gmail (36.8%), Apple Mail (20%) and iPhone (13.2%) — 70% of
+        the total — only 30% of subscribers would see the fallback. Always check the client
+        distribution of the specific list for that market/segment, not the industry average.</p>
+        <p><strong>Fallback:</strong> a single static image summarising all the hotspots
+        (optionally a different version for mobile); avoid a GIF as the fallback.</p>
+        <p><strong>When to propose it:</strong> lookbooks, catalogues with several products in
+        a single lifestyle image.</p>
+        
+    <div class="demo-section">
+      <div class="section-label">Live demo</div>
+      <p class="demo-note">Same markup as the internal component library — images are placeholders, to be replaced.</p>
+      <div class="demo-block">
+        <p class="demo-label">HotSpot</p>
+        <div class="demo-frame-wrap">
+          <iframe src="demos/spot.html" title="HotSpot" width="600" height="533" class="resptab" style="width:600px;max-width:600px;" loading="lazy" scrolling="no" frameborder="0"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <div class="support-detail" style="margin:22px 0 24px;font-size:13px;">
+      <div class="row"><span class="k yes">supported</span><span class="v">Apple Mail, Outlook for Mac (2011/2016), web browser, iOS Mail</span></div>
+      <div class="row"><span class="k no">fallback</span><span class="v">Outlook Windows, Gmail webmail, Outlook.com, Office 365, Google Apps, Yahoo Mail, AOL — the Gmail app shows the hotspots but they aren't tappable</span></div>
+    </div>
+
+    <div class="client-table-wrap">
+      <h3>Client support table</h3>
+      <p class="note">Source: internal documentation &mdash; &ldquo;HotSpot&rdquo; page.</p>
+      <div class="matrix-wrap">
+        <table class="client-table">
+          <thead><tr><th>Email client</th><th>Outcome</th></tr></thead>
+          <tbody>
+          <tr><td>Apple Mail 7, Apple Mail 8</td><td><span class="pill-wide y">Yes</span></td></tr>
+          <tr><td>Outlook 2011 and Outlook 2016 for Mac</td><td><span class="pill-wide y">Yes</span></td></tr>
+          <tr><td>Web browser</td><td><span class="pill-wide y">Yes</span></td></tr>
+          <tr><td>iPad and iPad mini (iOS)</td><td><span class="pill-wide y">Yes</span></td></tr>
+          <tr><td>iPhone (iOS)</td><td><span class="pill-wide y">Yes</span></td></tr>
+          <tr><td>Outlook 2000, 2002, 2003, 2007, 2010, 2013 and 2016</td><td><span class="pill-wide fb">Fallback</span></td></tr>
+          <tr><td>AOL (Internet Explorer)</td><td><span class="pill-wide fb">Fallback</span></td></tr>
+          <tr><td>Gmail App — shows the hotspots but they aren't tappable</td><td><span class="pill-wide fb">Fallback</span></td></tr>
+          <tr><td>Gmail</td><td><span class="pill-wide fb">Fallback</span></td></tr>
+          <tr><td>Google Apps</td><td><span class="pill-wide fb">Fallback</span></td></tr>
+          <tr><td>Office 365</td><td><span class="pill-wide fb">Fallback</span></td></tr>
+          <tr><td>Outlook.com</td><td><span class="pill-wide fb">Fallback</span></td></tr>
+          <tr><td>Yahoo! Mail</td><td><span class="pill-wide fb">Fallback</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <section class="page-notes">
+      <h2>Additional notes</h2>
+      <p class="note">Asset requirements, taken from the internal component library.</p>
+      <ul class="req-list">
+        <li>A desktop image and a mobile image for each hotspot.</li>
+        <li>A fallback image for desktop and one for mobile, preferably in retina (x2) format.</li>
+        <li>The exact number of assets depends on how many hotspots the specific project needs.</li>
+      </ul>
+      <p class="footnote">Source: internal Components Library.</p>
+    </section>
+
+    <div class="pagenav">
+      <a href="../modules/animations_css.html"><span class="dir">&larr; Previous</span>CSS Animations</a>
+      <span class="spacer"></span>
+      <a class="next" href="../modules/hamburger-menu.html"><span class="dir">Next &rarr;</span>Hamburger menu</a>
+    </div>
+  </main>
+</div>
+
+</body>
+</html>
